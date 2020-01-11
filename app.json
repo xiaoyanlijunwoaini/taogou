@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index-new/index-new",
+    "pages/shopptype/shopptype",
+    "pages/shopping/shopping",
+    "pages/my/my",
     "pages/logs/logs"
   ],
   "window": {
@@ -8,6 +12,36 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "/images/index-no-select.png",
+        "selectedIconPath": "/images/index-select.png"
+      },
+      {
+        "pagePath": "pages/shopptype/shopptype",
+        "text": "分 类",
+        "iconPath": "/images/shopptype-no-select.png",
+        "selectedIconPath": "/images/shopptype-select.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "/images/shopping-no-select.png",
+        "selectedIconPath": "/images/shopping-no-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我 的",
+        "iconPath": "/images/my-no-select.png",
+        "selectedIconPath": "/images/my-select.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

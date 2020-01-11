@@ -1,0 +1,79 @@
+<view class='search-view'>
+  <input class='input' confirm-type="search" maxlength="30" bindinput='wxSearchInput' value='{{keyword}}' bindconfirm='wxSearchFn' bindfocus="wxSerchFocus" bindblur="wxSearchBlur" placeholder='请输入搜索内容'></input>
+  <button class='search' bindtap="wxSearchFn" hover-class='button-hover'>搜索</button>
+</view>
+<view class="boxtwo-tab-nav {{HomeIndex == 0 ?'on':''}}" bindtap="boxtwo" data-index="0">首页</view>
+  <view class="boxtwo-tab-nav {{HomeIndex == 1 ?'on':''}}" bindtap="boxtwo" data-index="1">资源分享</view>
+  <view class="boxtwo-tab-nav {{HomeIndex == 2 ?'on':''}}" bindtap="boxtwo" data-index="2">微信小程序</view>
+   <view class="boxtwo-tab-nav {{HomeIndex == 3 ?'on':''}}" bindtap="boxtwo" data-index="3">网赚小项目</view>
+<view class="boxtwo-tab-nav {{HomeIndex == 4 ?'on':''}}" bindtap="boxtwo" data-index="4">共享经济</view>
+<view class="wrap">
+ <template name="lists">
+  <navigator url='../../pages/detail/detail?id={{id}}' hover-class="navigator-hover">
+   <view class='imgs'>
+    <image src="{{img}}" background-size="cover" mode="scaleToFill"></image>
+   </view>
+   <view class='infos'>
+    <view class="title">{{title}}</view>
+    <view class="date">{{cTime}}</view>
+   </view>
+  </navigator>
+ </template>
+</view>
+<view wx:if="{{HomeIndex == 0}}">
+<block wx:for="{{newsList}}" wx:key="*this">
+ <template is="lists" data="{{...item}}"/>
+</block>
+</view>
+ <view wx:if="{{HomeIndex == 1}}" >
+  <block wx:for="{{shareList}}" wx:key="*this">
+ <navigator url='../../pages/shareDetail/shareDetail?id={{item.id}}' hover-class="navigator-hover">
+   <view class='imgs'>
+    <image src="{{item.img}}" background-size="cover" mode="scaleToFill"></image>
+   </view>
+   <view class='infos'>
+    <view class="title">{{item.title}}</view>
+    <view class="date">{{item.cTime}}</view>
+   </view>
+  </navigator>
+</block>
+ </view>
+ <view wx:if="{{HomeIndex == 2}}" >
+   <block wx:for="{{weixinList}}" wx:key="*this">
+ <navigator url='../../pages/weixinDetail/weixinDetail?id={{item.id}}' hover-class="navigator-hover">
+   <view class='imgs'>
+    <image src="{{item.img}}" background-size="cover" mode="scaleToFill"></image>
+   </view>
+   <view class='infos'>
+    <view class="title">{{item.title}}</view>
+    <view class="date">{{item.cTime}}</view>
+   </view>
+  </navigator>
+ </block>
+ </view>
+ <view wx:if="{{HomeIndex == 3}}" >
+   <block wx:for="{{netearnList}}" wx:key="*this">
+ <navigator url='../../pages/netearnDetail/netearnDetail?id={{item.id}}' hover-class="navigator-hover">
+   <view class='imgs'>
+    <image src="{{item.img}}" background-size="cover" mode="scaleToFill"></image>
+   </view>
+   <view class='infos'>
+    <view class="title">{{item.title}}</view>
+    <view class="date">{{item.cTime}}</view>
+   </view>
+  </navigator>
+ </block>
+ </view>
+ <view wx:if="{{HomeIndex == 4}}" >
+ <block wx:for="{{economyList}}" wx:key="*this">
+ <navigator url='../../pages/economyDetail/economyDetail?id={{item.id}}' hover-class="navigator-hover">
+   <view class='imgs'>
+    <image src="{{item.img}}" background-size="cover" mode="scaleToFill"></image>
+   </view>
+   <view class='infos'>
+    <view class="title">{{item.title}}</view>
+    <view class="date">{{item.cTime}}</view>
+   </view>
+  </navigator>
+ </block>
+ </view>
