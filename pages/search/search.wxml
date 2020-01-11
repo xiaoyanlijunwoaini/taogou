@@ -1,0 +1,29 @@
+<view class='ctn'>
+<icon type='search'></icon>
+<input value='{{input_value}}' bindinput='inputValue'  focus='{{name_focus}}'></input>
+<text class='cancel' bindtap='searchTap'>{{search}}</text>
+</view>
+<!-- 热门搜索盒子 -->
+<view class='hotBox'>
+<text class='hotSearch'>热门搜索</text>
+<!-- 搜索词盒子 -->
+<view class='wid100'>
+<!-- 热门搜索词 -->
+<button wx:for='{{hotKeywords}}' wx:key="{{index}}" data-text="{{item}}" bindtap='this_value'>{{item}}</button>
+</view>
+</view>
+<!-- 搜索记录盒子 -->
+<view class='hisBox'>
+<text class='historySearch'>最近搜索</text>
+
+<image src='/images/delete.png' class='delete' bindtap='deleteTap'></image>
+<!-- 最近搜索词盒子 -->
+<view class='hist-box' >
+<view class='list' wx:for="{{history}}" wx:key="{{history.index}}">
+<image src='/images/time.png' style='width:15px;height:15px;margin:4rpx 10rpx 0 20rpx;'  class='time'></image>
+<!-- 最近搜索词 -->
+<text bindtap='this_value' data-text="{{item}}" >
+{{item}}</text>
+</view>
+</view>
+</view>

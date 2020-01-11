@@ -1,0 +1,89 @@
+/* pages/search/search.wxss */
+page{
+  height: 100%;
+  background-color: #F5F5F5;
+}
+.ctn{
+background-color: #F0EFF5;
+height: 88rpx;
+}
+ .ctn input{
+ height: 58rpx;
+  background-color: #fff;
+  width: 566rpx;
+  border-radius: 10rpx;
+ margin: 16rpx;
+ padding-left: 70rpx;
+ font-size: 29rpx;
+ 
+}
+.cancel{
+  font-size: 32rpx;
+  position: absolute;
+  right: 18rpx;
+  top: 20rpx;
+  color: #6F6F6E;
+}
+.ctn icon{
+  position: absolute;
+  top: 23rpx;
+  left: 36rpx;
+}
+.hotSearch{
+  font-size: 29rpx;
+  margin: 20rpx;
+  color: #BCBCBC;
+  }
+  .wid100{
+    margin-top:20rpx; 
+    width: 100%;
+    overflow: hidden;
+    padding-bottom:10px; 
+  }
+  .hisBox .delete{
+    width: 27rpx;
+    height: 27rpx;
+    margin: -40rpx 40rpx 0 0;
+    vertical-align: middle;
+    float: right;
+  }
+  .hist-box{
+    height: 50rpx;
+    overflow: hidden;
+  }
+ .hist-box .list{
+   position: relative;
+ }
+  .hist-box .list text{
+    font-size: 29rpx;
+    display: inline-table;
+    position: absolute;
+    top:-32rpx;
+    left:60rpx;
+  }
+  .wid100 button{
+    height: 64rpx;
+    text-align: center;
+    line-height: 64rpx;
+    display: inline-table;
+    font-size: 29rpx;
+    background-color: #fff;
+    margin:10rpx 20rpx;
+  }
+  .historySearch{
+     font-size: 29rpx;
+  margin: 20rpx;
+  color: #BCBCBC;
+  display: block;
+  }
+  .hisCont{
+    display: block;
+  }
+  .hisCont text{
+    position: absolute;
+    top:445rpx;
+    left:62rpx;
+    font-size: 29rpx;
+  
+  }
+ 

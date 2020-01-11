@@ -4,6 +4,7 @@
     "pages/index-new/index-new",
     "pages/shopptype/shopptype",
     "pages/shopping/shopping",
+    "pages/search/search",
     "pages/my/my",
     "pages/logs/logs"
   ],

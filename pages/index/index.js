@@ -53,5 +53,10 @@ Page({
     this.setData({
       inputShowed: false
     });
+  },
+  search: function () {
+    wx.navigateTo({
+      url: '../search/search'
+    })
   }
 })
