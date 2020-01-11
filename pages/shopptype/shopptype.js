@@ -11,7 +11,7 @@ data: {
     },
     {
       child_id: 2,
-      name: '卸妆',
+      name: '卸妆1',
       image: "/images/main.jpg"
     },
     {
